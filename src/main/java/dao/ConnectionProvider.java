@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class ConnectionProvider {
     private static final String DB_PASSWORD_ENV_VAR = "AIVEN_DB_PASSWORD";
 
-    private static final String AIVEN_PASSWORD = "System.getenv(DB_PASSWORD_ENV_VAR)";
+    private static final String AIVEN_PASSWORD = System.getenv(DB_PASSWORD_ENV_VAR);
 
     private static final String TARGET_DB_NAME = "defaultdb";
     private static final String AIVEN_USER = "avnadmin";
