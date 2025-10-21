@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Priority?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@/styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserBoxController">
+   <children>
+      <VBox alignment="CENTER" layoutX="100.0" layoutY="100.0" prefWidth="400.0" spacing="20.0" styleClass="form-container" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <Label styleClass="form-title" text="Find User" />
+
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <TextField fx:id="txtFindUser" promptText="Enter User Email" styleClass="text-field" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnFindUser" onAction="#handlefindUser" text="Search" styleClass="primary-button" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

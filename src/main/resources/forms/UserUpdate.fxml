@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" styleClass="root" stylesheets="@/styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserUpdateController">
+   <children>
+      <AnchorPane styleClass="form-container" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="15.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <Label styleClass="form-title" text="Update User Information" />
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="form-label" text="Name" />
+                        <TextField fx:id="txtName" styleClass="text-field" />
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="form-label" text="Gender" />
+                        <HBox alignment="CENTER_LEFT" spacing="30.0">
+                           <children>
+                              <RadioButton fx:id="radioMale" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="genderGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radioFemale" text="Female" toggleGroup="$genderGroup" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="form-label" text="Contact" />
+                        <TextField fx:id="txtContact" styleClass="text-field" />
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="form-label" text="Address" />
+                        <TextField fx:id="txtAddress" styleClass="text-field" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="15.0" styleClass="image-container" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="90.0">
+               <children>
+                  <ImageView fx:id="viewImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label styleClass="image-caption" text="Profile Picture" />
+                  <Button fx:id="btnChoosePicture" onAction="#handleChoosePicture" styleClass="secondary-button" text="Choose Picture" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnUpdate" onAction="#handleUpdate" prefWidth="120.0" styleClass="primary-button" text="Save Changes" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="75.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,199 @@
+/* Gốc của giao diện */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #EBF8FF, #BEE3F8);
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ==========================================================================
+   Typography & Containers
+   ========================================================================== */
+
+/* Tiêu đề lớn của trang */
+.main-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2D3748;
+}
+
+/* Khung trắng chính (dùng cho các form và khu vực nội dung) */
+.form-container {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 25, 0, 0, 10);
+}
+
+/* Tiêu đề nhỏ bên trong form */
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2D3748;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* Nhãn cho các ô nhập liệu */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #4A5568;
+    -fx-padding: 0 0 0 2px;
+}
+
+
+/* ==========================================================================
+   Input Fields
+   ========================================================================== */
+
+/* Style mặc định cho TẤT CẢ các ô TextField */
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #A0AEC0;
+}
+
+.text-field:focused {
+    -fx-border-color: #3182CE;
+    -fx-effect: innershadow(gaussian, rgba(49, 130, 206, 0.1), 5, 0, 0, 0);
+}
+
+/* Nhóm input (Dành riêng cho trang Login) */
+.input-group {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px 12px;
+}
+
+/* GHI ĐÈ: Làm cho TextField "tàng hình" CHỈ KHI nó nằm bên trong .input-group */
+.input-group .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.icon {
+    -fx-font-size: 16px;
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/* Nút bấm chính */
+.primary-button {
+    -fx-pref-height: 40px;
+    -fx-background-color: #3182CE;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.primary-button:hover { -fx-background-color: #2B6CB0; }
+
+/* Nút bấm phụ */
+.secondary-button {
+    -fx-pref-height: 35px;
+    -fx-background-color: #E2E8F0;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #2D3748;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+.secondary-button:hover { -fx-background-color: #CBD5E0; }
+
+/* Nút xóa */
+.delete-button {
+    -fx-pref-height: 35px;
+    -fx-background-color: #E53E3E;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+.delete-button:hover { -fx-background-color: #C53030; }
+
+
+/* ==========================================================================
+   Dashboard Specific
+   ========================================================================== */
+
+/* Thanh điều hướng */
+.nav-bar {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 15, 0, 0, 5);
+}
+
+/* Nút trên thanh điều hướng */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4A5568;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.nav-button:hover, .nav-button:focused {
+    -fx-background-color: #EDF2F7;
+    -fx-text-fill: #2B6CB0;
+}
+
+
+/* ==========================================================================
+   TableView Specific
+   ========================================================================== */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.table-view .column-header-background { -fx-background-color: #EDF2F7; -fx-background-radius: 10px 10px 0 0; }
+.table-view .column-header, .table-view .filler { -fx-background-color: transparent; -fx-font-size: 13px; -fx-font-weight: 600; -fx-text-fill: #4A5568; -fx-padding: 10px; }
+.table-view .table-row-cell { -fx-background-color: white; -fx-border-color: transparent; -fx-padding: 12px; -fx-font-size: 14px; }
+.table-view .table-row-cell:odd{ -fx-background-color: #F7FAFC; }
+.table-view .table-row-cell:hover { -fx-background-color: #E2E8F0; }
+.table-view .table-row-cell:selected { -fx-background-color: #3182CE; }
+.table-view .table-row-cell:selected .text { -fx-fill: white; }
+
+
+/* ==========================================================================
+   Image Specific
+   ========================================================================== */
+
+.image-container {
+    -fx-padding: 20px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 2px;
+    -fx-border-style: dashed;
+    -fx-border-radius: 15px;
+}
+.image-caption {
+    -fx-font-size: 13px;
+    -fx-text-fill: #718096;
+}
+
+.time-display {
+    -fx-background-color: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2D3748;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0, 0, 3);
+}
