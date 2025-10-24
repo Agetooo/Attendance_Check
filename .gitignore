@@ -33,3 +33,6 @@ dataset/
 model.yml
 dependency-reduced-pom.xml
 modifiedPom.xml
+images/
+# IDE specific folders
+.idea/
