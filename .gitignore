@@ -31,3 +31,4 @@ target/
 # Dữ liệu AI nhạy cảm và nặng
 dataset/
 model.yml
+dependency-reduced-pom.xml
