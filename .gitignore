@@ -11,7 +11,7 @@ out/
 .settings
 .springBeans
 .sts4-cache
-.model.yml
+
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
@@ -28,3 +28,6 @@ target/
 
 ### Mac OS ###
 .DS_Store
+# Dữ liệu AI nhạy cảm và nặng
+dataset/
+model.yml
