@@ -76,4 +76,19 @@ public class DashboardController {
             e.printStackTrace();
         }
     }
+    public void handleEnrollment() throws IOException{
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/forms/Enrollment.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            EnrollmentController controller = loader.getController();
+
+            stage.setTitle("Enrollment");
+            stage.show();
+            stage.setOnCloseRequest(event -> controller.stopCamera());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
