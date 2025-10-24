@@ -70,7 +70,7 @@ public class ViewUserController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // 1. Gán dữ liệu cho các cột
-        colId.setCellValueFactory(new PropertyValueFactory<>("displayId"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -112,13 +112,13 @@ public class ViewUserController implements Initializable {
         tableView.getSelectionModel().selectedItemProperty().addListener((obs, oldUser, selectedUser) -> {
             if (selectedUser != null) {
                 try {
-                    String path = selectedUser.getAvatarPath(); // hoặc getImagePath()
+                    String path = selectedUser.getAvatarPath();
 
                     File file = new File(path);
                     if (file.exists()) {
                         Image userImage = new Image(file.toURI().toString());
                         viewImage.setImage(userImage);
-                    } else { // Nếu không tìm thấy → ảnh mặc định
+                    } else {
                         Image defaultImage = new Image(getClass().getResourceAsStream("/images/GuestRender.png"));
                         viewImage.setImage(defaultImage);
                     }

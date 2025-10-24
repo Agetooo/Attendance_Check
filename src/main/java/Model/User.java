@@ -33,7 +33,4 @@ public class User {
     public String getAddress() { return address; }
 
     public String getAvatarPath() { return avatarPath; }
-    public String getDisplayId() {
-        return "2023" + id;
-    }
 }
